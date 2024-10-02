@@ -20,7 +20,7 @@ jobs:
           echo "VITE_URL_BACKEND=${{ secrets.BACKEND_URL }}" > .env
           npm run build
       - name: Connect to AWS
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           role-session-name: awssyncsession
           role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
