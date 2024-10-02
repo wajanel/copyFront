@@ -21,7 +21,7 @@ export const HomePage = () => {
                         />
                         <Carousel.Caption>
                             <h3>Sucursal 1</h3>
-                            <p>Ciudad Guatemala</p>
+                            <p>Ciudad Guatemala, Guatemala</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -32,7 +32,7 @@ export const HomePage = () => {
                         />
                         <Carousel.Caption>
                             <h3>Sucursal 2</h3>
-                            <p>Villa Nueva</p>
+                            <p>Villa Nueva, Guatemala</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -43,7 +43,7 @@ export const HomePage = () => {
                         />
                         <Carousel.Caption>
                             <h3>Sucursal 3</h3>
-                            <p>Escuintla</p>
+                            <p>Escuintla, Escuintla</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
