@@ -19,8 +19,12 @@ jobs:
         run: |
           echo "VITE_URL_BACKEND=${{ secrets.BACKEND_URL }}" > .env
           npm run build
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+      - name: Connect to AWS
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          name: dist
-          path: dist/
+          role-session-name: awssyncsession
+          role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: sync bucket
+        run: aws s3 sync ./dist/ s3://${{ secrets.AWS_BUCKET_NAME }} --delete
